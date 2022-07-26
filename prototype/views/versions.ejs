@@ -1,0 +1,10 @@
+<%- include('header.ejs') %>
+<!-- Start -->
+
+<h1>Deck Versions</h1>
+<% for (var key in data) { %>
+    <button onclick='gotoVersion(<%= data[key].versionnr %>)'><%= data[key].versionnr %> | <%= data[key].description %></button><br />
+<% } %>
+
+<!-- End -->
+<%- include('footer.ejs') %>

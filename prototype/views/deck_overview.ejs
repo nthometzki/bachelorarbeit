@@ -1,0 +1,24 @@
+<%- include('header.ejs') %>
+
+
+<h2>Your Decklists</h2>
+
+<br />
+<form action="/addDeck" method="POST">
+<input type="text" name="deckname" value="name"/>
+<fieldset>
+    <% for (var key in heroes) { %>
+        <input type="radio" name="hero" id="<%= heroes[key].id %>" value="<%= heroes[key].id %>"/><label for="<%= heroes[key].id %>"><%= heroes[key].name %></label>
+    <% } %>
+</fieldset>
+<input type="submit" name="adddeck" value="Create new Deck">
+</form>
+
+<br /><br />
+
+<% for (var key in data) { %>
+    <a href="./deck/<%= data[key].deckid %>"><%= data[key].name %></a><br />
+<% } %>
+
+
+<%- include('footer.ejs') %>

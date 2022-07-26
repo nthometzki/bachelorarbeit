@@ -1,0 +1,19 @@
+<%- include('header.ejs') %>
+
+
+<h2>Register</h2>
+
+<form action="/register" method="POST">
+    <input type="text" name="email" />
+    <br /><br />
+    <input type="password" name="password" />
+    <br /><br />
+    <button type="submit" value="Send">Register</button>
+</form>
+
+<br /><br />
+
+<a href="./login">Login</a>
+
+
+<%- include('footer.ejs') %>
